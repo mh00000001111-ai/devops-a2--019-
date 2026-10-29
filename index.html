@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website">
+  <title>Your Name | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2f;
+      --text: #edf2ff;
+      --muted: #aab5d0;
+      --accent: #71e0c1;
+      --line: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top right, #1c3151 0, var(--bg) 42%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1060px, 92%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 5;
+      background: rgba(11,16,32,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 0; }
+    .brand { font-weight: 800; letter-spacing: .5px; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 18px; font-size: .95rem; color: var(--muted); }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding: 90px 0 70px; display: grid; grid-template-columns: 1.5fr .8fr; align-items: center; gap: 38px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); line-height: 1.05; margin: 12px 0 20px; }
+    h1 span { color: var(--accent); }
+    .intro { color: var(--muted); max-width: 650px; font-size: 1.1rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; padding: 11px 17px; border-radius: 10px; font-weight: 700; border: 1px solid var(--line); }
+    .button.primary { background: var(--accent); color: #07151a; border-color: var(--accent); }
+    .button:hover { transform: translateY(-2px); }
+    .profile-card { background: linear-gradient(145deg, #182642, #11182b); border: 1px solid var(--line); border-radius: 24px; padding: 28px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
+    .avatar { width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 15px; display: grid; place-items: center; background: #203b4a; color: var(--accent); border: 2px solid var(--accent); font-size: 2.3rem; font-weight: 800; }
+    .profile-card p { color: var(--muted); margin-bottom: 0; }
+    section { padding: 45px 0; }
+    .section-title { font-size: 2rem; margin: 0 0 8px; }
+    .section-subtitle { color: var(--muted); margin: 0 0 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { background: rgba(18,26,47,.88); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+    .card h3 { margin-top: 0; }
+    .card p { color: var(--muted); }
+    .tag { display: inline-block; margin: 4px 5px 0 0; padding: 4px 9px; border-radius: 999px; background: rgba(113,224,193,.1); color: var(--accent); font-size: .82rem; }
+    .project-link { color: var(--accent); font-weight: 700; }
+    .contact-box { background: linear-gradient(120deg, #152741, #121a2f); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); padding: 24px 0; margin-top: 35px; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 55px; }
+      .profile-card { max-width: 420px; }
+      .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">MY<span>PORTFOLIO</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div>
+        <div class="eyebrow">Student • Learner • Future Professional</div>
+        <h1>Hello, I'm <span>Your Name</span>.</h1>
+        <p class="intro">Welcome to my portfolio. I'm a student building my skills in technology and creating projects as I learn. This website is a place to share my work, skills, and goals.</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View My Projects</a>
+          <a class="button" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="avatar">YN</div>
+        <h2>Your Name</h2>
+        <p>Student / Aspiring Developer</p>
+        <p>Replace this text with a short introduction about yourself.</p>
+      </aside>
+    </section>
+
+    <section class="container" id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">A little introduction</p>
+      <div class="card">
+        <p>I'm currently learning about computers, programming, Git, and software development. I enjoy solving problems, learning new tools, and turning ideas into practical projects. My goal is to keep improving and build useful, well-organized work.</p>
+        <p><strong>Education:</strong> Add your school, college, or degree here.</p>
+        <p><strong>Career goal:</strong> Add the type of role or field you want to pursue.</p>
+      </div>
+    </section>
+
+    <section class="container" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Edit these to match skills you actually have.</p>
+      <div class="card">
+        <span class="tag">Git & GitHub</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">PowerShell basics</span>
+        <span class="tag">Problem solving</span>
+        <span class="tag">Teamwork</span>
+      </div>
+    </section>
+
+    <section class="container" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Add your own projects as you complete them.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive website introducing me, my skills, and my projects. Built with HTML and CSS in one file.</p>
+          <span class="tag">HTML</span><span class="tag">CSS</span>
+          <p><a class="project-link" href="#contact">Project details →</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Replace this with a short description of a project you have built or are currently learning.</p>
+          <span class="tag">Add technology</span>
+          <p><a class="project-link" href="#contact">Project details →</a></p>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Describe what the project does, what you learned, and what problem it solves.</p>
+          <span class="tag">Add technology</span>
+          <p><a class="project-link" href="#contact">Project details →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Add contact details you are comfortable sharing publicly.</p>
+      <div class="contact-box">
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>GitHub:</strong> <a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Your GitHub profile</a></p>
+        <p><strong>Location:</strong> Your city (optional)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Your Name. Built with HTML and CSS.</div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
